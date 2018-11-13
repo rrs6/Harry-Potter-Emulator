@@ -52,4 +52,16 @@ public class RepositorioCasaLista {
 			return false;
 		}
 	}
+	public int[][] getCaracteristicaCasas(int[][]caracteristicas, int n)
+	{
+		if(this.casa == null)
+		{
+			return caracteristicas;
+		}
+		else
+		{
+			caracteristicas[n] = this.casa.getCaracteristicaCasa();
+			return getCaracteristicaCasas(caracteristicas, n+1);
+		}
+	}
 }

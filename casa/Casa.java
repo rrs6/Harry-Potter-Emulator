@@ -7,11 +7,11 @@ public class Casa {
 	Bruxo fundador;
 	Professor diretor;
 	
-	public Casa(String nome, Bruxo fundador , Professor diretor)
+	public Casa(String nome, Bruxo fundador , Professor diretor, int[] caracteristicas)
 	{
 		this.nome = nome;
 		this.pontos = 0;
-		this.ptsCaracteristicas = new int[4];
+		this.ptsCaracteristicas = caracteristicas;
 		this.fundador = fundador;
 		this.diretor = diretor;
 	}
@@ -19,11 +19,8 @@ public class Casa {
 	{
 		return this.nome;
 	}
-	public void atribuirCaracteristica(int coragem, int criatividade, int inteligentes, int ambiciosos)
+	public int[] getCaracteristicaCasa()
 	{
-		this.ptsCaracteristicas[0] = coragem;
-		this.ptsCaracteristicas[1] = criatividade;
-		this.ptsCaracteristicas[2] = inteligentes;
-		this.ptsCaracteristicas[3] = ambiciosos;
+		return this.ptsCaracteristicas;
 	}
 }
